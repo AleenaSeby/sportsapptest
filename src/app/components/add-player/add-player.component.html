@@ -1,0 +1,60 @@
+
+<div class="title-group">
+  <h1 class="mat-h1">Add Player</h1>
+  <mat-divider fxFlex="1 0"></mat-divider>
+</div>
+
+<!-- Form -->
+<div   class="inner-wrapper">
+  <form [formGroup]="playerForm" (ngSubmit)="submitPlayerForm()" #resetPlayerForm="ngForm" novalidate>
+    <!-- Left block -->
+    <mat-card>
+      <div class="controlers-wrapper" [formGroup]="playerForm">
+        <!-- Name -->
+        <mat-form-field class="example-full-width">
+          <input  placeholder="Player name" formControlName="player_name">
+        </mat-form-field>
+
+        <!-- Age -->
+        <mat-form-field class="example-full-width">
+          <input  placeholder="age" formControlName="age">
+          
+        </mat-form-field>
+
+        <!-- total_runs -->
+       
+        <mat-form-field class="example-full-width">
+            <input  placeholder="total_runs" formControlName="total_runs">
+            
+          </mat-form-field>
+    <!-- Right block -->
+    
+        <!-- hundreds -->
+        <mat-form-field class="example-full-width">
+            <input  placeholder="hundreds" formControlName="hundreds">
+            
+          </mat-form-field>
+
+        <!-- wickets -->
+        <mat-form-field class="example-full-width">
+            <input  placeholder="Wickets" formControlName="wickets">
+           
+          </mat-form-field>
+
+        <!-- strike -->
+        <mat-form-field class="example-full-width">
+            <input  placeholder="Strike Rate"  formControlName="strike">
+          
+          </mat-form-field>
+        </div>
+    </mat-card>
+    <!-- Submit & Reset -->
+    <mat-card>
+      <div class="full-wrapper button-wrapper">
+        <div class="button-wrapper">
+          <button mat-flat-button color="warn">Submit</button>
+        </div>
+      </div>
+    </mat-card>
+  </form>
+</div>
